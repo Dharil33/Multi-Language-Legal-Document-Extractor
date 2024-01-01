@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: NLP-Deployment
-          image: python:3.9-slim
+          image: python:3.8-slim-buster
           ports:
-            - containerPort: 5000
+            - containerPort: 8501
           imagePullPolicy: Always
