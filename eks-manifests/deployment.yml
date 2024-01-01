@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: NLP-Deployment
+  labels:
+    app: NLP-Deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: NLP-Deployment
+  template:
+    metadata:
+      labels:
+        app: NLP-Deployment
+    spec:
+      containers:
+        - name: NLP-Deployment
+          image: python:3.9-slim
+          ports:
+            - containerPort: 5000
+          imagePullPolicy: Always
